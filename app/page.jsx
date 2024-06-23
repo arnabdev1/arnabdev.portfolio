@@ -15,14 +15,21 @@ const Home = () => {
     <section className="h-full">
       <div className="container w-full h-full mx-auto">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24 ">
-          <div className="text-center xl:text-left order-2 xl:order-none ">
-            <span className="text-xl">Full-Stack Software Developer</span>
+          <div className="text-center xl:text-left order-2 xl:order-none">
+            <span className="text-xl text-white/80">
+              Full-Stack Software Developer
+            </span>
             <h1 className="h1 mb-6">
               Hello I&apos;m <br />{" "}
-              <span className="text-accent">Arnab Dev</span>
+              <span className="text-[#cbacf9]">Arnab Dev</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
-              I am proficient in various programming languages and technologies.
+            <p className="max-w-[500px] mb-9 text-white font-bold">
+              Looking for SWE Intern roles.
+              {/* <br />
+              <div className="text-white/80">
+                I am proficient in various programming languages and
+                technologies.
+              </div> */}
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Link href="cv.pdf">
@@ -38,7 +45,7 @@ const Home = () => {
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-primary"
+                  iconStyles="w-9 h-9 border border-[#cbacf9] rounded-full flex justify-center items-center text-[#cbacf9] text-base hover:bg-[#cbacf9] hover:text-primary hover:transition-all duration-primary"
                 />
               </div>
             </div>

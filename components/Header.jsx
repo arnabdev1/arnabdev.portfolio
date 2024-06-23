@@ -9,8 +9,9 @@ const Header = () => {
     <header className="py-8 xl:py-12 text-white">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
-          <h1 className="text-4xl font-semibold">
-            Arnab <span className="text-accent">.</span>
+          <h1 className="flex flex-row text-4xl font-semibold gap-0">
+            <div>AD</div>
+            <span className="text-[#cbacf9]">.</span>
           </h1>
         </Link>
         {/* Desktop nav */}
@@ -23,7 +24,7 @@ const Header = () => {
 
         {/* mobile nav */}
         <div className="xl:hidden">
-          <MobileNav/>
+          <MobileNav />
         </div>
       </div>
     </header>
