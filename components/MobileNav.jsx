@@ -15,6 +15,10 @@ const links = [
     path: "cv.pdf",
   },
   {
+    name: "magic",
+    path: "/magic",
+  },
+  {
     name: "contact",
     path: "/contact",
   },

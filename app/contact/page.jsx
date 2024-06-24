@@ -13,8 +13,9 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
-
+import { UserInputContext } from "@/components/context";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { useContext } from "react";
 
 const info = [
   {
@@ -36,6 +37,27 @@ const info = [
 ];
 
 const Contact = () => {
+  const { userInput } = useContext(UserInputContext);
+  const info = [
+    {
+      icon: <FaPhoneAlt />,
+      title: "Phone",
+      description: userInput.phone || "+880 1990-933196",
+    },
+    {
+      icon: <FaEnvelope />,
+      title: "Email",
+      description: userInput.email || "official.arnabdev@gmail.com",
+    },
+    {
+      icon: <FaMapMarkerAlt />,
+      title: "Address",
+      description:
+        userInput.address ||
+        "Concord Regency, Apt-9/C, House No.19/1, West Panthapath, Kalabagan, Dhaka-1205, Bangladesh",
+    },
+  ];
+
   return (
     <motion.section
       initial={{ opacity: 0 }}

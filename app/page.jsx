@@ -1,53 +1,51 @@
+// pages/index.jsx
 "use client";
-import React, { createContext } from "react";
+import React, { useContext } from "react";
+import { UserInputContext } from "@/components/context";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { FiDownload } from "react-icons/fi";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
-import Image from "next/image";
 import Stats from "@/components/Stats";
-import Link from "next/link";
-
+import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
+  const { userInput } = useContext(UserInputContext);
+
   return (
     <section className="h-full mb-20">
       <div className="container w-full h-full mx-auto">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24 ">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl text-white/80">
               Full-Stack Software Developer
             </span>
             <h1 className="h1 mb-6">
-              Hello I&apos;m <br />{" "}
-              <span className="text-[#cbacf9]">Arnab Dev</span>
+              Hello I&apos;m <br />
+              <div className="text-[#cbacf9] flex flex-row gap-[2vw] xl:justify-normal justify-center items-center">
+                <div id="firstname">{userInput.firstName || "Arnab"}</div>
+                <div id="lastname">{userInput.lastName || "Dev"}</div>
+              </div>
             </h1>
             <p className="max-w-[500px] mb-9 text-white font-bold">
               Looking for SWE Intern roles.
-              {/* <br />
-              <div className="text-white/80">
-                I am proficient in various programming languages and
-                technologies.
-              </div> */}
             </p>
-            <Stats/>
+            <Stats />
           </div>
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>
         </div>
       </div>
-      
       <div className="flex flex-col xl:flex-row items-center justify-center gap-8">
         <Link href="cv.pdf">
           <Button
             variant="outline"
             size="lg"
-            className="uppercase flex  items-center gap-2 "
+            className="uppercase flex items-center gap-2"
           >
             <span>Download CV</span>
-            <FiDownload className="text-xl " />
+            <FiDownload className="text-xl" />
           </Button>
         </Link>
         <div className="mb-8 xl:mb-0">
