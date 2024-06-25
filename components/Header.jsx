@@ -2,10 +2,10 @@
 "use client"
 import React, { useContext } from "react";
 import Link from "next/link";
-import { UserInputContext } from "@/components/context";
-import { Button } from "@/components/ui/button";
-import Nav from "@/components/Nav";
-import MobileNav from "@/components/MobileNav";
+import { UserInputContext } from "../app/context/Context";
+import { Button } from "../components/ui/Button";
+import Nav from "../components/Nav";
+import MobileNav from "../components/MobileNav";
 
 const Header = () => {
   const { userInput } = useContext(UserInputContext);

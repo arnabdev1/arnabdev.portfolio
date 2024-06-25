@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "../../components/ui/Button";
+import { Input } from "../../components/ui/input";
 import {
   Select,
   SelectContent,
@@ -10,32 +10,13 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
+} from "../../components/ui/select";
+import { Textarea } from "../../components/ui/textarea";
 import { motion } from "framer-motion";
-import { UserInputContext } from "@/components/context";
+import { UserInputContext } from "../../app/context/Context";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { useContext } from "react";
-
-const info = [
-  {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    description: "+880 1990-933196",
-  },
-  {
-    icon: <FaEnvelope />,
-    title: "Email",
-    description: "official.arnabdev@gmail.com",
-  },
-  {
-    icon: <FaMapMarkerAlt />,
-    title: "Address",
-    description:
-      "Concord Regency, Apt-9/C, House No.19/1, West Panthapath, Kalabagan, Dhaka-1205, Bangladesh",
-  },
-];
-
+ 
 const Contact = () => {
   const { userInput } = useContext(UserInputContext);
   const info = [

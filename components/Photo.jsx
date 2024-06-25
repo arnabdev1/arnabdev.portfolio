@@ -1,10 +1,14 @@
-"use client";
+"use client"; 
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ImageContext } from "../app/context/imageContext";
+import { useContext } from "react";
 
 
 const Photo = () => {
+  const { imageData } = useContext(ImageContext);
+
   return (
     <div className="h-full w-full relative">
       <motion.div
@@ -20,15 +24,15 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2, duration: 0.4, ease: "easeIn" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[298px] h-[298px] rounded-full xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/arnab-t.png"
+            src={imageData.image ? imageData.image : "/arnab-t.png"}
             priority
             quality={100}
             fill
             alt="Arnab Dev"
-            className="object-contain"
+            className="object-contain w-[298px] h-[298px] rounded-full xl:w-[498px] xl:h-[498px]"
           />
         </motion.div>
 

@@ -9,7 +9,7 @@ export const UserInputProvider = ({ children }) => {
     firstName: "",
     lastName: "",
     email: "",
-    phone: "",
+    phone: "", 
     address: "",
   });
 

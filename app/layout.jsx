@@ -1,9 +1,10 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
-import ContextWrapper from "@/components/ContextWrapper";
+import Header from "../components/Header";
+import PageTransition from "../components/PageTransition";
+import StairTransition from "../components/StairTransition";
+import ContextWrapper from "../app/context/ContextWrapper";
+import { ImageProvider } from "../app/context/imageContext";
 const JetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -20,9 +21,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={JetBrainsMono.variable}>
         <ContextWrapper>
-          <Header />
-          <StairTransition />
-          <PageTransition> {children} </PageTransition>
+          <ImageProvider>
+            <Header />
+            <StairTransition />
+            <PageTransition> {children} </PageTransition>
+          </ImageProvider>
         </ContextWrapper>
       </body>
     </html>

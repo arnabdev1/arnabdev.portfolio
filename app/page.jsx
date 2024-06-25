@@ -1,12 +1,13 @@
 // pages/index.jsx
 "use client";
 import React, { useContext } from "react";
-import { UserInputContext } from "@/components/context";
+import { UserInputContext } from "./context/Context";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import Social from "@/components/Social";
-import Photo from "@/components/Photo";
-import Stats from "@/components/Stats";
+// import { Button } from "@/components/ui/Button";
+
+import Social from "../components/Social";
+import Photo from "../components/Photo";
+import Stats from "../components/Stats";
 import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
@@ -23,8 +24,7 @@ const Home = () => {
             <h1 className="h1 mb-6">
               Hello I&apos;m <br />
               <div className="text-[#cbacf9] flex flex-row gap-[2vw] xl:justify-normal justify-center items-center">
-                <div id="firstname">{userInput.firstName || "Arnab"}</div>
-                <div id="lastname">{userInput.lastName || "Dev"}</div>
+                <div id="name">{userInput.firstName || "Arnab"}{" "}{userInput.lastName || "Dev"}</div>
               </div>
             </h1>
             <p className="max-w-[500px] mb-9 text-white font-bold">
@@ -39,14 +39,14 @@ const Home = () => {
       </div>
       <div className="flex flex-col xl:flex-row items-center justify-center gap-8">
         <Link href="cv.pdf">
-          <Button
+          {/* <Button
             variant="outline"
             size="lg"
             className="uppercase flex items-center gap-2"
           >
             <span>Download CV</span>
             <FiDownload className="text-xl" />
-          </Button>
+          </Button> */}
         </Link>
         <div className="mb-8 xl:mb-0">
           <Social

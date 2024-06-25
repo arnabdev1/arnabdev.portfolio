@@ -4,26 +4,30 @@ import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import Link from "next/link";
 import {CiMenuFries} from "react-icons/ci";
+import { UserInputContext } from "../app/context/Context";
+import { useContext } from "react";
 
-const links = [
-  {
-    name: "home",
-    path: "/",
-  },
-  {
-    name: "resume",
-    path: "cv.pdf",
-  },
-  {
-    name: "magic",
-    path: "/magic",
-  },
-  {
-    name: "contact",
-    path: "/contact",
-  },
-];
+
 const MobileNav = () => {
+  const { userInput } = useContext(UserInputContext);
+  const links = [
+    {
+      name: "home",
+      path: "/",
+    },
+    {
+      name: "resume",
+      path: "cv.pdf",
+    },
+    {
+      name: "magic",
+      path: "/magic",
+    },
+    {
+      name: "contact",
+      path: "/contact",
+    },
+  ];
   const pathname = usePathname();
   return (
     <Sheet className="">
@@ -31,7 +35,10 @@ const MobileNav = () => {
         <CiMenuFries className="text-[32px] text-[#cbacf9]" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
-        <div className=" mt-10 mb-10 text-center text-2xl">Arnab Dev</div>
+        <div className=" mt-10 mb-10 text-center text-2xl">
+          <div>{userInput.firstName || "Arnab"}</div>{" "}
+          <div>{userInput.lastName || "Dev"}</div>
+        </div>
 
         {links.map((link, index) => {
           return (
