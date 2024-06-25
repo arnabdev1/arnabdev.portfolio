@@ -24,7 +24,9 @@ const Home = () => {
             <h1 className="h1 mb-6">
               Hello I&apos;m <br />
               <div className="text-[#cbacf9] flex flex-row gap-[2vw] xl:justify-normal justify-center items-center">
-                <div id="name">{userInput.firstName || "Arnab"}{" "}{userInput.lastName || "Dev"}</div>
+                <div id="name">
+                  {userInput.firstName || "Arnab"} {userInput.lastName || "Dev"}
+                </div>
               </div>
             </h1>
             <p className="max-w-[500px] mb-9 text-white font-bold">
@@ -51,7 +53,7 @@ const Home = () => {
         <div className="mb-8 xl:mb-0">
           <Social
             containerStyles="flex gap-6"
-            iconStyles="w-9 h-9 border border-[#cbacf9] rounded-full flex justify-center items-center text-[#cbacf9] text-base hover:bg-[#cbacf9] hover:text-primary hover:transition-all duration-primary"
+            iconStyles="w-12 h-12 hover:w-14 hover:h-14  border border-[#cbacf9] rounded-full flex justify-center items-center text-[#cbacf9] text-base hover:bg-[#cbacf9] hover:text-primary hover:transition-all duration-primary"
           />
         </div>
       </div>

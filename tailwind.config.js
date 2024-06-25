@@ -25,6 +25,7 @@ module.exports = {
     extend: {
       colors:{
         primary:"#010319",
+        secondary:"#cbacf9",
         accent:{
           DEFAULT: "#00ff99",
           hover: "00e187"
@@ -47,4 +48,5 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+  darkMode:'class',
 }

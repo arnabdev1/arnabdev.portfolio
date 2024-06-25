@@ -5,6 +5,7 @@ import PageTransition from "../components/PageTransition";
 import StairTransition from "../components/StairTransition";
 import ContextWrapper from "../app/context/ContextWrapper";
 import { ImageProvider } from "../app/context/imageContext";
+import { Providers } from "./providers";
 const JetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -18,15 +19,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={JetBrainsMono.variable}>
-        <ContextWrapper>
-          <ImageProvider>
-            <Header />
-            <StairTransition />
-            <PageTransition> {children} </PageTransition>
-          </ImageProvider>
-        </ContextWrapper>
+        <Providers>
+          <ContextWrapper>
+            <ImageProvider>
+              <Header />
+              <StairTransition />
+              <PageTransition> {children} </PageTransition>
+            </ImageProvider>
+          </ContextWrapper>
+        </Providers>
       </body>
     </html>
   );

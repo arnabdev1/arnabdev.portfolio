@@ -24,7 +24,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2, duration: 0.4, ease: "easeIn" },
           }}
-          className="w-[298px] h-[298px] rounded-full xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[298px] h-[298px] rounded-full xl:w-[498px] xl:h-[498px] absolute"
         >
           <Image
             src={imageData.image ? imageData.image : "/arnab-t.png"}

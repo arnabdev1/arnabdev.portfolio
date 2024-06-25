@@ -8,11 +8,11 @@ import {
 } from "react-icons/fa";
 
 const socials = [
-  { icon: <FaGithub />, path: "https://github.com/arnabdev1" },
-  { icon: <FaFacebook />, path: "https://www.facebook.com/arnabdev6" },
-  { icon: <FaTwitter />, path: "https://x.com/arnaabdev" },
-  { icon: <FaInstagram />, path: "https://www.instagram.com/arnabde__v8/" },
   { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/arnabdev/" },
+  { icon: <FaFacebook />, path: "https://www.facebook.com/arnabdev6" },
+  { icon: <FaGithub />, path: "https://github.com/arnabdev1" },
+  { icon: <FaInstagram />, path: "https://www.instagram.com/arnabde__v8/" },
+  { icon: <FaTwitter />, path: "https://x.com/arnaabdev" },
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {
