@@ -3,7 +3,6 @@
 import React, { useContext } from "react";
 import Link from "next/link";
 import { UserInputContext } from "../app/context/Context";
-import { Button } from "../components/ui/Button";
 import Nav from "../components/Nav";
 import MobileNav from "../components/MobileNav";
 
