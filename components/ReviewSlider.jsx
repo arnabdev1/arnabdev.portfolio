@@ -61,7 +61,7 @@ const ReviewSlider = () => {
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>
               <motion.div
-                className="bg-secondary p-6 mt-10 rounded-[40px] shadow-2xl shadow-secondary w-[50vw] mx-auto text-center"
+                className="bg-secondary p-6 mt-10 rounded-[40px] shadow-2xl shadow-secondary w-[70vw] xl:w-[50vw] mx-auto text-center"
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
