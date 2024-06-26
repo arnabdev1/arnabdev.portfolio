@@ -8,7 +8,7 @@ import Link from "next/link";
 import Social from "../components/Social";
 import Photo from "../components/Photo";
 import Stats from "../components/Stats";
-import ReviewSlider from "@/components/ReviewSlider";
+import WorkExperience from "@/components/ReviewSlider";
 
 const Home = () => {
   const { userInput } = useContext(UserInputContext);
@@ -59,7 +59,7 @@ const Home = () => {
       </div>
 
       <div>
-        <ReviewSlider />
+        <WorkExperience />
       </div>
     </section>
   );

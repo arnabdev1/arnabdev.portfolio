@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
-const reviews = [
+const experience = [
   {
     img: "/bondstein.jpeg",
     company: "Bondstein Technologies",
@@ -37,17 +37,16 @@ const reviews = [
     img: "/ess.jpeg",
     company: "European Standard School",
     position: "Class Prefect",
-    content:
-      "",
+    content: "",
     timeline: "1 July 2022 - 30 June 2024",
   },
 ];
 
-const ReviewSlider = () => {
+const WorkExperience = () => {
   return (
     <div className="">
-      <div className=" xl:py-8 flex flex-col items-center mt-10 text-bold">
-        <div className="h1  text-secondary">Work Experience</div>
+      <div className=" xl:py-8 px-5 flex flex-col items-center mt-10 text-bold">
+        <div className="h1 text-secondary">Work Experience</div>
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
@@ -58,7 +57,7 @@ const ReviewSlider = () => {
           navigation
           className="h-200 w-full rounded-lg"
         >
-          {reviews.map((review, index) => (
+          {experience.map((item, index) => (
             <SwiperSlide key={index}>
               <motion.div
                 className="bg-secondary p-6 mt-10 rounded-[40px] shadow-2xl shadow-secondary w-[70vw] xl:w-[50vw] mx-auto text-center"
@@ -70,22 +69,22 @@ const ReviewSlider = () => {
                 <div className="card-content flex flex-col items-center justify-center">
                   <Image
                     className="mb-10"
-                    src={review.img}
+                    src={item.img}
                     width={300}
                     height={300}
                   />
                   <h1 className="mb-2 xl:text-4xl text-3xl font-semibold">
-                    {review.company}
+                    {item.company}
                   </h1>
                   <h3 className="mb-2 xl:text-xl text-md font-semibold">
-                    {review.position}
+                    {item.position}
                   </h3>
                   <p className="hidden xl:flex mb-2 text-white/60">
-                    {review.content}
+                    {item.content}
                   </p>
                   <p className="mb-10 font-bold xl:text-white text-white/60 text-sm">
                     {" "}
-                    {review.timeline}
+                    {item.timeline}
                   </p>
                 </div>
               </motion.div>
@@ -97,4 +96,4 @@ const ReviewSlider = () => {
   );
 };
 
-export default ReviewSlider;
+export default WorkExperience;
