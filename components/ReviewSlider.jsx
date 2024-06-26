@@ -14,7 +14,7 @@ const reviews = [
     company: "Bondstein Technologies",
     position: "Software Engineer Intern",
     content:
-      "Ad ad Lorem esse proident minim esse amet nostrud laboris proident. Nulla reprehenderit duis aute duis commodo dolore aliquip reprehenderit veniam eiusmod qui esse dolor. Id laborum id Lorem consectetur. Nostrud in anim irure ut. Do cupidatat minim in id enim. Tempor occaecat sint duis ipsum voluptate eu cillum aliqua deserunt ullamco tempor duis veniam.",
+      "Worked as a full-stack developer using reactJS, nextJS, and tailwind CSS",
     timeline: "1 June 2024 - Present",
   },
   {
@@ -22,7 +22,7 @@ const reviews = [
     company: "Next Initiative Foundation",
     position: "President",
     content:
-      "Ad ad Lorem esse proident minim esse amet nostrud laboris proident. Nulla reprehenderit duis aute duis commodo dolore aliquip reprehenderit veniam eiusmod qui esse dolor. Id laborum id Lorem consectetur. Nostrud in anim irure ut. Do cupidatat minim in id enim. Tempor occaecat sint duis ipsum voluptate eu cillum aliqua deserunt ullamco tempor duis veniam.",
+      "Chiefly organized intricate projects and engaged in myriad community activities to work towards reducing the suffering of people and the e=ffect of environmental pollution in Bangladesh. Recruited and led a team of 50+ Campus Ambassadors and 100+ volunteers. Organised events to plant/distribute 1000+ plants. Raised funds to contribute towards the affected people during the COVID-19 pandemic, and provided assistance(food and clothing) to 1000+ people in local areas through charity events. Chief Organizer at multiple youth events of 4000+ participants. Our work has been featured in national TV channels like Atn Bangla and Ek Takar Khobor.",
     timeline: "1 August 2020 - Present",
   },
   {
@@ -30,7 +30,7 @@ const reviews = [
     company: "ESS STEM Club",
     position: "President",
     content:
-      "Ad ad Lorem esse proident minim esse amet nostrud laboris proident. Nulla reprehenderit duis aute duis commodo dolore aliquip reprehenderit veniam eiusmod qui esse dolor. Id laborum id Lorem consectetur. Nostrud in anim irure ut. Do cupidatat minim in id enim. Tempor occaecat sint duis ipsum voluptate eu cillum aliqua deserunt ullamco tempor duis veniam.",
+      "Leader during growth from 50 members to 200+ members, making it the school’s largest academic club. Chief organiser of intra-school events(Science fair, Science film festival, Science and Math Olympiad) and academic sessions. Prepared question sets on Mathematics, Physics, Chemistry, ICT, Programming, and Astrophysics for olympiads.",
     timeline: "1 October 2021 - 1 January 2024",
   },
   {
@@ -38,7 +38,7 @@ const reviews = [
     company: "European Standard School",
     position: "Class Prefect",
     content:
-      "Ad ad Lorem esse proident minim esse amet nostrud laboris proident. Nulla reprehenderit duis aute duis commodo dolore aliquip reprehenderit veniam eiusmod qui esse dolor. Id laborum id Lorem consectetur. Nostrud in anim irure ut. Do cupidatat minim in id enim. Tempor occaecat sint duis ipsum voluptate eu cillum aliqua deserunt ullamco tempor duis veniam.",
+      "",
     timeline: "1 July 2022 - 30 June 2024",
   },
 ];

@@ -29,7 +29,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-10 transition-transform duration-300 ease-in-out ${
         visible
-          ? "translate-y-0 xl:bg-black xl:bg-opacity-75"
+          ? "translate-y-0 dark:xl:bg-primary xl:bg-[#492c74] dark:xl:bg-opacity-75  xl:bg-opacity-75"
           : "-translate-y-full xl:bg-transparent"
       }`}
     >
@@ -48,7 +48,7 @@ const Header = () => {
             <Nav />
 
             <Link href="/contact">
-              <button className="transition-all duration-300 p-5 rounded-full text-lg border-white border-2 hover:border-0 font-light text-white bg-transparent hover:text-xl hover:bg-[#cbacf9] hover:text-black active:bg-[#cbacf9] focus:outline-none focus:text-white active:text-black focus:ring focus:ring-[#ffffff]">
+              <button className="transition-all duration-300 p-3 rounded-full text-lg border-white border-2 hover:border-0 font-light text-white bg-transparent hover:text-xl hover:bg-[#cbacf9] hover:text-black active:bg-[#cbacf9] focus:outline-none focus:text-white active:text-black focus:ring focus:ring-[#ffffff]">
                 Hire me
               </button>
             </Link>
