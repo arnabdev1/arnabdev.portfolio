@@ -26,7 +26,9 @@ export default function RootLayout({ children }) {
             <ImageProvider>
               <Header />
               <StairTransition />
-              <PageTransition> {children} </PageTransition>
+              <PageTransition>
+                <div className="mt-20">{children}</div>
+              </PageTransition>
             </ImageProvider>
           </ContextWrapper>
         </Providers>
