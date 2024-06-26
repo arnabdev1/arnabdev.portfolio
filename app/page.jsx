@@ -8,7 +8,7 @@ import Link from "next/link";
 import Social from "../components/Social";
 import Photo from "../components/Photo";
 import Stats from "../components/Stats";
-import { FiDownload } from "react-icons/fi";
+import ReviewSlider from "@/components/ReviewSlider";
 
 const Home = () => {
   const { userInput } = useContext(UserInputContext);
@@ -56,6 +56,10 @@ const Home = () => {
             iconStyles="w-12 h-12 hover:w-14 hover:h-14  border border-[#cbacf9] rounded-full flex justify-center items-center text-[#cbacf9] text-base hover:bg-[#cbacf9] hover:text-primary hover:transition-all duration-primary"
           />
         </div>
+      </div>
+
+      <div>
+        <ReviewSlider />
       </div>
     </section>
   );
