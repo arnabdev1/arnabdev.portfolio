@@ -4,20 +4,21 @@ import React, { useContext } from "react";
 import { UserInputContext } from "./context/Context";
 import Link from "next/link";
 // import { Button } from "@/components/ui/Button";
-
 import Social from "../components/Social";
 import Photo from "../components/Photo";
 import Stats from "../components/Stats";
 import WorkExperience from "@/components/ReviewSlider";
+// import Footer from "@/components/Footer";
+// import Featured from "@/components/Featured";
 
 const Home = () => {
   const { userInput } = useContext(UserInputContext);
 
   return (
-    <section className="h-full mb-20">
+    <section className="h-full">
       <div className="container w-full h-full mx-auto">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          <div className="text-center xl:text-left order-2 xl:order-none">
+          <div className="text-center xl:text-left order-2 xl:order-none ">
             <span className="text-xl text-white/80">
               Full-Stack Software Developer
             </span>
@@ -29,7 +30,7 @@ const Home = () => {
                 </div>
               </div>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white font-bold">
+            <p className="w-full mb-9 text-white font-bold">
               Looking for SWE Intern roles.
             </p>
             <Stats />
@@ -41,14 +42,7 @@ const Home = () => {
       </div>
       <div className="flex flex-col xl:flex-row items-center justify-center gap-8">
         <Link href="cv.pdf">
-          {/* <Button
-            variant="outline"
-            size="lg"
-            className="uppercase flex items-center gap-2"
-          >
-            <span>Download CV</span>
-            <FiDownload className="text-xl" />
-          </Button> */}
+          
         </Link>
         <div className="mb-8 xl:mb-0">
           <Social
@@ -58,8 +52,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div>
+      <div className="flex flex-col">
         <WorkExperience />
+        {/* <Featured/>
+        <Footer/> */}
       </div>
     </section>
   );

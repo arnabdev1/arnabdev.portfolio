@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
   
+
+.secondary {
+  font-family: 'Poppins', sans-serif;
+}
 @layer base{
   body{
     @apply font-primary dark:bg-primary bg-[#492c74] text-white leading-loose;
