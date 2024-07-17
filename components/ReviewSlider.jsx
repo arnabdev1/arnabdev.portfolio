@@ -45,8 +45,8 @@ const experience = [
 const WorkExperience = () => {
   return (
     <div className="font-secondary">
-      <div className=" xl:py-8 px-5 flex flex-col items-center mt-10 text-bold">
-        <div className="h1 text-secondary">Work Experience</div>
+      <div className=" xl:py-8 md:px-5 flex flex-col items-center mt-10 text-bold">
+        <div className="h1 text-center text-secondary">Work Experience</div>
         <Swiper
           spaceBetween={50}
           slidesPerView={1}

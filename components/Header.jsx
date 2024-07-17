@@ -48,7 +48,7 @@ const Header = () => {
             <Nav />
 
             <Link href="/contact">
-              <button className="transition-all duration-300 p-3 rounded-full text-lg border-white border-2 hover:border-0 font-light text-white bg-transparent hover:text-xl hover:bg-[#cbacf9] hover:text-black active:bg-[#cbacf9] focus:outline-none focus:text-white active:text-black focus:ring focus:ring-[#ffffff]">
+              <button className="transition-all duration-300 p-3 rounded-full text-lg border-white border-2 hover:border-transparent font-light text-white bg-transparent hover:scale-110 hover:bg-[#cbacf9] hover:text-black active:bg-[#cbacf9] focus:outline-none focus:text-white active:text-black focus:ring focus:ring-[#ffffff]">
                 Hire me
               </button>
             </Link>
