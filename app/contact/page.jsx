@@ -16,7 +16,7 @@ import { UserInputContext } from "../../app/context/Context";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { useContext } from "react";
 import Social from "../../components/Social";
- 
+
 const Contact = () => {
   const { userInput } = useContext(UserInputContext);
   const info = [
@@ -46,11 +46,9 @@ const Contact = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="py-6"
     >
-      <div className="container mx-auto">
-        <div className="flex flex-col  gap-[30px]">
-          {/* <div className="xl:w-[54%] order-2 xl:order-none">
+      <div className="w-full sm:px-10 px-2 md:mt-[180px] flex flex-col  sm:gap-[30px] gap-[20px]">
+        {/* <div className="xl:w-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10  bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-[#cbacf9]">Lets work together!</h3>
               <p className="text-white/60"></p>
@@ -81,30 +79,34 @@ const Contact = () => {
             </form>
           </div> */}
 
-          <div className=" flex   mb-8 xl:mb-0">
-            <ul className="flex flex-col gap-10">
-              {info.map((item, index) => {
-                return (
-                  <li key={index} className="flex items-center justify-center gap-6">
-                    <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-[#cbacf9] rounded-md flex items-center justify-center">
-                      <div className="text-[28px] ">{item.icon}</div>
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-white/60">{item.title}</p>
-                      <h3 className="text-white text-xl">{item.description}</h3>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+        <div className="w-full mb-8 xl:mb-0">
+          <ul className="flex flex-col gap-10">
+            {info.map((item, index) => {
+              return (
+                <li
+                  key={index}
+                  className="flex items-center justify-center sm:gap-6 gap-2"
+                >
+                  <div className="w-[40px] h-[40px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-[#cbacf9] rounded-md flex items-center justify-center">
+                    <div className="xl:text-[28px] text-[20px] ">{item.icon}</div>
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-white/60">{item.title}</p>
+                    <h3 className="text-white sm:text-xl text-md">
+                      {item.description}
+                    </h3>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
-          <div className="mb-8 xl:mb-0 justify-center items-center">
-            <Social
-              containerStyles="flex gap-6"
-              iconStyles="w-12 h-12 hover:w-14 hover:h-14 border border-[#cbacf9] rounded-full flex justify-center items-center text-[#cbacf9] text-base hover:bg-[#cbacf9] hover:text-primary hover:transition-all duration-primary"
-            />
-          </div>
+        <div className="w-full mb-8 xl:mb-0 justify-center items-start">
+          <Social
+            containerStyles="flex gap-6"
+            iconStyles="md:w-12 md:h-12 w-10 h-10 hover:scale-125 border border-[#cbacf9] rounded-full flex justify-center items-center text-[#cbacf9] text-base hover:bg-[#cbacf9] hover:text-primary transition-all duration-200"
+          />
         </div>
       </div>
     </motion.section>
