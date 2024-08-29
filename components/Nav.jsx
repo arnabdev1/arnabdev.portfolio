@@ -8,6 +8,10 @@ const links = [
     path: "/",
   },
   {
+    name: "projects",
+    path: "/projects",
+  },
+  {
     name: "resume",
     path: "cv.pdf",
   },
