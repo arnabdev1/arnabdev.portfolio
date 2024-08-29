@@ -27,11 +27,6 @@ const predefinedQuestions = [
     // link: "#",
   },
   {
-    question: "How old are you?",
-    answer: "I am 19 years old",
-    // link: "#",
-  },
-  {
     question: "How can I contact you??",
     answer: "Call me or text me +1 469 947 4379, or email me official.arnabdev@gmail.com",
     // link: "#",
