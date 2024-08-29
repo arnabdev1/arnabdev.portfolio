@@ -17,19 +17,23 @@ import icon4 from "./icons/4.png";
 
 const predefinedQuestions = [
   {
-    question: "How are you arnab?",
-    answer:
-      "Great! What about you!",
+    question: "How are you Arnab?",
+    answer: "Great! What about you!",
     link: "#",
   },
   {
     question: "Where do you live?",
-    answer: "I currently live in Dhaka, Bangladesh?",
+    answer: "I currently live in Richardson, Texas, USA.",
     // link: "#",
   },
   {
     question: "How old are you?",
     answer: "I am 19 years old",
+    // link: "#",
+  },
+  {
+    question: "How can I contact you??",
+    answer: "Call me or text me +1 469 947 4379, or email me official.arnabdev@gmail.com",
     // link: "#",
   },
 ];
