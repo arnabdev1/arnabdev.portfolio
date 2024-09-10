@@ -56,6 +56,7 @@ const Projects = () => {
     <div className="mt-[80px] flex flex-wrap">
       {data.map((item, index) => (
         <ProjectCard
+          key={index}
           name={item.name}
           bg={item.img}
           description={item.description}
