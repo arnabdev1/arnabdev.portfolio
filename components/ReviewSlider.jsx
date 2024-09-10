@@ -14,15 +14,31 @@ const experience = [
     company: "Bondstein Technologies",
     position: "Software Engineer Intern",
     content:
-      "Worked as a full-stack developer using reactJS, nextJS, and tailwind CSS",
-    timeline: "1 June 2024 - Present",
+      "Worked using reactJS and nextJS frameworks, tailwind CSS, framer-motion, swiper, etc. Worked on building front end website from scratch, which was used as a sample to secure government project tender and on building full-stack website for NRI Jewelry.",
+    timeline: "1 June 2024 - 2 August 2024",
+  },
+  {
+    img: "/dfr.webp",
+    company: "Dallas Formula Racing",
+    position: "Software Developer",
+    content:
+      "",
+    timeline: "25 August 2024 - Present",
+  },
+  {
+    img: "/edification.png",
+    company: "Edification",
+    position: "CS Teaching Assistant",
+    content:
+      "Taught python fundamentals to students of class 9 to class 11. Assisted senior computer science teacher to teach his courses of GCSE O level Computer Science(2210)",
+    timeline: "1 October 2022 - 1 December 2023",
   },
   {
     img: "/nifw.png",
     company: "Next Initiative Foundation",
-    position: "President",
+    position: "President, Web Developer",
     content:
-      "Chiefly organized intricate projects and engaged in myriad community activities to work towards reducing the suffering of people and the e=ffect of environmental pollution in Bangladesh. Recruited and led a team of 50+ Campus Ambassadors and 100+ volunteers. Organised events to plant/distribute 1000+ plants. Raised funds to contribute towards the affected people during the COVID-19 pandemic, and provided assistance(food and clothing) to 1000+ people in local areas through charity events. Chief Organizer at multiple youth events of 4000+ participants. Our work has been featured in national TV channels like Atn Bangla and Ek Takar Khobor.",
+      "Recruited and led 300+ volunteers, chief organiser at multiple fund raising youth events of 4000+ participants. Our work has been featured in national TV channels like Atn Bangla and Ek Takar Khobor. Built portfolio website using React.",
     timeline: "1 August 2020 - Present",
   },
   {
@@ -30,7 +46,7 @@ const experience = [
     company: "ESS STEM Club",
     position: "President",
     content:
-      "Leader during growth from 50 members to 200+ members, making it the school’s largest academic club. Chief organiser of intra-school events(Science fair, Science film festival, Science and Math Olympiad) and academic sessions. Prepared question sets on Mathematics, Physics, Chemistry, ICT, Programming, and Astrophysics for olympiads.",
+      "• Leader during growth from 50 members to 200+ members, making it the school’s largest academic club. Chief organiser of intra-school events(Science fair, Science film festival, Science and Math Olympiad) and academic sessions. • Prepared question sets on Mathematics, Physics, Chemistry, ICT, Programming, and Astrophysics for olympiads.",
     timeline: "1 October 2021 - 1 January 2024",
   },
   {
@@ -52,7 +68,7 @@ const WorkExperience = () => {
           slidesPerView={1}
           modules={[Navigation, Pagination, Autoplay]}
         //   pagination={{ type: "fraction" }}
-          autoplay={{ delay: 3000 }}
+          autoplay={{ delay: 9000 }}
           loop
           navigation
           className="h-200 w-full rounded-lg"
@@ -73,16 +89,16 @@ const WorkExperience = () => {
                     width={300}
                     height={300}
                   />
-                  <h1 className="mb-2 xl:text-4xl text-3xl font-semibold">
+                  <h1 className="mb-2 md:text-4xl text-3xl font-semibold">
                     {item.company}
                   </h1>
-                  <h3 className="mb-2 xl:text-xl text-md font-semibold">
+                  <h3 className="mb-2 md:text-xl text-md font-semibold">
                     {item.position}
                   </h3>
-                  <p className="hidden xl:flex mb-2 text-white/60">
+                  <p className="hidden md:flex mb-2 text-white/80">
                     {item.content}
                   </p>
-                  <p className="mb-10 font-bold xl:text-white text-white/60 text-sm">
+                  <p className="mb-10 font-bold md:text-white text-white/80 text-sm">
                     {" "}
                     {item.timeline}
                   </p>
