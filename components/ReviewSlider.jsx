@@ -10,20 +10,20 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
 const experience = [
   {
+    img: "/utd.png",
+    company: "University of Texas at Dallas",
+    position: "Undergraduate Research Assistant",
+    content:
+      "Working on dynamic analysis and fuzzing at professor Shiyi Wei’s lab.",
+    timeline: "1 October 2024 - Present",
+  },
+  {
     img: "/bondstein.jpeg",
     company: "Bondstein Technologies",
     position: "Software Engineer Intern",
     content:
       "Worked using reactJS and nextJS frameworks, tailwind CSS, framer-motion, swiper, etc. Worked on building front end website from scratch, which was used as a sample to secure government project tender and on building full-stack website for NRI Jewelry.",
     timeline: "1 June 2024 - 2 August 2024",
-  },
-  {
-    img: "/dfr.webp",
-    company: "Dallas Formula Racing",
-    position: "Software Developer",
-    content:
-      "",
-    timeline: "25 August 2024 - Present",
   },
   {
     img: "/edification.png",
@@ -68,7 +68,7 @@ const WorkExperience = () => {
           slidesPerView={1}
           modules={[Navigation, Pagination, Autoplay]}
         //   pagination={{ type: "fraction" }}
-          autoplay={{ delay: 9000 }}
+          autoplay={{ delay: 11000 }}
           loop
           navigation
           className="h-200 w-full rounded-lg"

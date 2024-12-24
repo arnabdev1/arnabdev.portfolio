@@ -5,11 +5,27 @@ import React from 'react'
 const Projects = () => {
   const data = [
     {
+      name: "HydraWatch",
+      img: "/hydra.png",
+      description:
+        "Web app that can visualize pipeline data through an interactive dashboard to help lease operators make informed decisions quickly. Key features include detection and prediction of hydrate formation based on current gas injection metrics. ",
+      tech: "Flask, Next.js, ML",
+      link: "https://devpost.com/software/lorem-ipsum-zxuv8p",
+    },
+    {
+      name: "LegalAI",
+      img: "/legal.png",
+      description:
+        "The chatbot is designed to handle legal inquiries. Allows users to upload legal documents and receive detailed insights and guidance through the AI-powered analysis provided by LegalAI.",
+      tech: "React, Amazon Q, SageMaker, and Bedrock",
+      link: "https://legalai-test.netlify.app/",
+    },
+    {
       name: "Kormi App",
       img: "/kormi.png",
       description:
         "Full stack project where domestic workers can be hired. Used various technologies like Context API, React Router Dom, SCSS, React leaflet, etc",
-      tech: "MERN Stack",
+      tech: "MERN Stack(React, Node.js, MongoDB)",
       link: "https://kormi.netlify.app/",
     },
     {
@@ -38,7 +54,7 @@ const Projects = () => {
       name: "Personal Portfolio",
       img: "/personalportfolio.png",
       description: "You are looking at it!",
-      tech: "nextJS",
+      tech: "Next.js",
       link: "https://arnabdev.netlify.app/",
     },
   ];

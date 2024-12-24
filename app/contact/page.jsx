@@ -1,16 +1,4 @@
 "use client";
-
-import { Input } from "../../components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "../../components/ui/select";
-import { Textarea } from "../../components/ui/textarea";
 import { motion } from "framer-motion";
 import { UserInputContext } from "../../app/context/Context";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
@@ -23,7 +11,7 @@ const Contact = () => {
     {
       icon: <FaPhoneAlt />,
       title: "Phone",
-      description: userInput.phone || "+880 1990-933196",
+      description: userInput.phone || "+1 469 947 4379",
     },
     {
       icon: <FaEnvelope />,
@@ -35,7 +23,7 @@ const Contact = () => {
       title: "Address",
       description:
         userInput.address ||
-        "Concord Regency, Apt-9/C, House No.19/1, West Panthapath, Kalabagan, Dhaka-1205, Bangladesh",
+        "950 N Loop Road, TX 75080, USA",
     },
   ];
 
