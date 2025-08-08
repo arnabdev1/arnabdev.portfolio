@@ -27,7 +27,7 @@ const Photo = () => {
           className="w-[298px] h-[298px] rounded-full xl:w-[498px] xl:h-[498px] absolute"
         >
           <Image
-            src={imageData.image ? imageData.image : "/arnab-t.png"}
+            src={imageData.image ? imageData.image : "/arnab-spur.png"}
             priority
             quality={100}
             fill

@@ -5,6 +5,30 @@ import React from 'react'
 const Projects = () => {
   const data = [
     {
+      name: "F1 Analysis tool",
+      img: "/utd.png",
+      description:
+        "Currently in progress",
+      tech: "React front end, Springboot back end",
+      link: "",
+    },
+    {
+      name: "Variability Aware Fuzzer",
+      img: "/vafuzz.png",
+      description:
+        "Research: A novel variability-aware fuzzer that integrates principled dynamic variability-aware analysis within the fuzzing process to enhance configuration space exploration using new variability-aware seed selection and mutations to drive the fuzzing process.",
+      tech: "Docker, C, C++, Python",
+      link: "",
+    },
+    {
+      name: "FuzzbenchPlusPlus",
+      img: "/utd.png",
+      description:
+        "Research:In this work, we identify critical gaps in current benchmarking infrastructure that prevent fair and systematic comparison of such fuzzers. We extend FuzzBench to support configuration-aware fuzzing.",
+      tech: "Docker, C, C++, Python",
+      link: "",
+    },
+    {
       name: "HydraWatch",
       img: "/hydra.png",
       description:
@@ -46,7 +70,8 @@ const Projects = () => {
     {
       name: "Next Initiative Foundation Portfolio",
       img: "/nifportfolio.png",
-      description: "Portfolio website for fundraising purposes built for a non profit organization.",
+      description:
+        "Portfolio website for fundraising purposes built for a non profit organization.",
       tech: "React",
       link: "https://nextinitiative.netlify.app/",
     },
