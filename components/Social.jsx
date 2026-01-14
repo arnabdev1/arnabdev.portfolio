@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { memo } from "react";
 import {
   FaGithub,
   FaFacebook,
@@ -15,7 +16,7 @@ const socials = [
   { icon: <FaTwitter />, path: "https://x.com/arnaabdev" },
 ];
 
-const Social = ({ containerStyles, iconStyles }) => {
+const Social = memo(({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
       {socials.map((item, index) => {
@@ -27,6 +28,8 @@ const Social = ({ containerStyles, iconStyles }) => {
       })}
     </div>
   );
-};
+});
+
+Social.displayName = 'Social';
 
 export default Social;

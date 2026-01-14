@@ -1,6 +1,5 @@
-// components/Header.jsx
 "use client";
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { UserInputContext } from "../app/context/Context";
 import Nav from "../components/Nav";
@@ -10,19 +9,28 @@ import ThemeSwitch from "./ThemeSwitch";
 const Header = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const throttleTimeout = useRef(null);
 
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-    setPrevScrollPos(currentScrollPos);
-  };
+  const handleScroll = useCallback(() => {
+    if (throttleTimeout.current) return;
+    
+    throttleTimeout.current = setTimeout(() => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+      throttleTimeout.current = null;
+    }, 100);
+  }, [prevScrollPos]);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      if (throttleTimeout.current) {
+        clearTimeout(throttleTimeout.current);
+      }
     };
-  }, [prevScrollPos, visible]);
+  }, [handleScroll]);
 
   const { userInput } = useContext(UserInputContext);
   return (
@@ -47,7 +55,7 @@ const Header = () => {
 
             <Nav />
 
-            <Link href="/contact">
+            <Link href="/cv.pdf" target="_blank">
               <button className="transition-all duration-300 p-3 rounded-full text-lg border-white border-2 hover:border-transparent font-light text-white bg-transparent hover:scale-110 hover:bg-[#cbacf9] hover:text-black active:bg-[#cbacf9] focus:outline-none focus:text-white active:text-black focus:ring focus:ring-[#ffffff]">
                 Hire me
               </button>

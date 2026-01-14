@@ -6,7 +6,7 @@ import StairTransition from "../components/StairTransition";
 import ContextWrapper from "../app/context/ContextWrapper";
 import { ImageProvider } from "../app/context/imageContext";
 import { Providers } from "./providers";
-import Chatbot from "../components/Chatbot/Chatbot";
+
 const JetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -33,8 +33,6 @@ export default function RootLayout({ children }) {
             </ImageProvider>
           </ContextWrapper>
         </Providers>
-        <Chatbot/>
-
       </body>
     </html>
   );

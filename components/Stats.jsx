@@ -1,21 +1,23 @@
 "use client";
 import CountUp from "react-countup";
+import { memo } from "react";
+
 const stats = [
   {
-    num: "3",
+    num: "4",
     text: "Years of Experience",
   },
   {
-    num: "11",
+    num: "12",
     text: "Projects Completed",
   },
   {
-    num: "15",
+    num: "30",
     text: "Technologies Learned",
   },
 ];
 
-const Stats = () => {
+const Stats = memo(() => {
   return (
     <section className="w-full pt-4 pb-12 xl:pt-0 xl:pb-0">
       <div className="flex flex-row gap-3 w-full mx-auto xl:max-w-none">
@@ -47,6 +49,8 @@ const Stats = () => {
       </div>
     </section>
   );
-};
+});
+
+Stats.displayName = 'Stats';
 
 export default Stats;

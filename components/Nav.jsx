@@ -13,7 +13,7 @@ const links = [
   },
   {
     name: "resume",
-    path: "cv.pdf",
+    path: "/cv.pdf",
   },
   {
     name: "magic",
@@ -35,6 +35,7 @@ const Nav = () => {
           <Link
             href={link.path}
             key={index}
+            target={link.path === "/cv.pdf" ? "_blank" : undefined}
             className={`${
               link.path === pathname &&
               "text-[#cbacf9] border-b-2 border-[#cbacf9]"

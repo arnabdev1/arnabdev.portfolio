@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ImageContext } from "../app/context/imageContext";
-import { useContext } from "react";
+import { useContext, memo } from "react";
 
 
-const Photo = () => {
+const Photo = memo(() => {
   const { imageData } = useContext(ImageContext);
 
   return (
@@ -15,28 +15,22 @@ const Photo = () => {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+          transition: { duration: 0.3, ease: "easeOut" },
         }}
       >
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: 2, duration: 0.4, ease: "easeIn" },
-          }}
-          className="w-[298px] h-[298px] rounded-full xl:w-[498px] xl:h-[498px] absolute"
-        >
+        <div className="w-[298px] h-[298px] rounded-full xl:w-[498px] xl:h-[498px] absolute">
           <Image
             src={imageData.image ? imageData.image : "/arnab-spur.png"}
             priority
-            quality={100}
+            quality={85}
             fill
+            sizes="(max-width: 768px) 298px, 498px"
             alt="Arnab Dev"
             className="object-contain w-[298px] h-[298px] rounded-full xl:w-[498px] xl:h-[498px]"
           />
-        </motion.div>
+        </div>
 
-        <motion.svg
+        <svg
           className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
           fill="transparent"
           viewBox="0 0 506 506"
@@ -61,10 +55,12 @@ const Photo = () => {
               repeatType: "reverse",
             }}
           />
-        </motion.svg>
+        </svg>
       </motion.div>
     </div>
   );
-}
+});
+
+Photo.displayName = 'Photo';
 
 export default Photo;
