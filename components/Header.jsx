@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useState, useEffect, useCallback, useRef } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { UserInputContext } from "../app/context/Context";
 import Nav from "../components/Nav";
@@ -7,22 +7,25 @@ import MobileNav from "../components/MobileNav";
 import ThemeSwitch from "./ThemeSwitch";
 
 const Header = () => {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const prevScrollPos = useRef(0);
   const throttleTimeout = useRef(null);
 
-  const handleScroll = useCallback(() => {
-    if (throttleTimeout.current) return;
-    
-    throttleTimeout.current = setTimeout(() => {
-      const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
-      throttleTimeout.current = null;
-    }, 100);
-  }, [prevScrollPos]);
-
   useEffect(() => {
+    const handleScroll = () => {
+      if (throttleTimeout.current) return;
+      
+      throttleTimeout.current = setTimeout(() => {
+        const currentScrollPos = window.pageYOffset;
+        const isScrollingUp = prevScrollPos.current > currentScrollPos;
+        const isAtTop = currentScrollPos < 10;
+        
+        setVisible(isScrollingUp || isAtTop);
+        prevScrollPos.current = currentScrollPos;
+        throttleTimeout.current = null;
+      }, 100);
+    };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -30,7 +33,7 @@ const Header = () => {
         clearTimeout(throttleTimeout.current);
       }
     };
-  }, [handleScroll]);
+  }, []);
 
   const { userInput } = useContext(UserInputContext);
   return (
