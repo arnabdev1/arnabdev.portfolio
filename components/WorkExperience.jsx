@@ -29,7 +29,8 @@ const experience = [
     company: "Edification",
     position: "CS Teaching Assistant",
     content:
-      `Taught python fundamentals to students of class 9 to class 11. Assisted senior computer science teacher to teach his courses of GCSE O level Computer Science(2210)`,
+      `• Taught python fundamentals to students of class 9 to class 11. 
+• Assisted senior computer science teacher to teach his courses of GCSE O level Computer Science(2210)`,
     timeline: "1 October 2022 - 1 December 2023",
   },
   {
@@ -37,7 +38,8 @@ const experience = [
     company: "Next Initiative Foundation",
     position: "President, Web Developer",
     content:
-      `Recruited and led 300+ volunteers, chief organiser at multiple fund raising youth events of 4000+ participants. Our work has been featured in national TV channels like Atn Bangla and Ek Takar Khobor. Built portfolio website using React.`,
+      `• Recruited and led 300+ volunteers, chief organiser at multiple fund raising youth events of 4000+ participants. 
+• Our work has been featured in national TV channels like Atn Bangla and Ek Takar Khobor. Built portfolio website using React.`,
     timeline: "1 August 2020 - Present",
   },
   {
@@ -45,7 +47,9 @@ const experience = [
     company: "ESS STEM Club",
     position: "President",
     content:
-      `• Leader during growth from 50 members to 200+ members, making it the school’s largest academic club. Chief organiser of intra-school events(Science fair, Science film festival, Science and Math Olympiad) and academic sessions. • Prepared question sets on Mathematics, Physics, Chemistry, ICT, Programming, and Astrophysics for olympiads.`,
+      `• Leader during growth from 50 members to 200+ members, making it the school’s largest academic club. 
+• Chief organiser of intra-school events(Science fair, Science film festival, Science and Math Olympiad) and academic sessions. 
+• Prepared question sets on Mathematics, Physics, Chemistry, ICT, Programming, and Astrophysics for olympiads.`,
     timeline: "1 October 2021 - 1 January 2024",
   },
 ];
