@@ -6,6 +6,15 @@ import Image from "next/image";
 const Projects = memo(() => {
   const data = [
     {
+      name: "NeuroSync",
+      img: "/neurosync-logo.png",
+      description:
+        `Engineered a closed-loop Brain-Computer Interface (BCI) using a Muse 2 gateway to stream real-time EEG/PPG data, training a 1D-CNN and LSTM pipeline to predict cognitive fatigue with a 30-minute forecasting window. 
+         Architected a Mixture-of-Agents (MoA) intervention system in Node.js and LangGraph via the Featherless.ai API, dynamically routing between 3 LLMs (DeepSeek, Qwen, KimiK2) to autonomously block distracting applications.`,
+      tech: "Next.js, Node.js, React, Flask, PyTorch, LangChain, LangGraph, Featherless.ai",
+      link: "https://devpost.com/software/undecided-iwednr",
+    },
+    {
       name: "Sprinklify",
       img: "/sprinklify.png",
       description:
