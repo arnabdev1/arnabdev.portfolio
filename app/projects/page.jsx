@@ -41,7 +41,7 @@ const Projects = memo(() => {
       description:
         "Research:In this work, we identify critical gaps in current benchmarking infrastructure that prevent fair and systematic comparison of such fuzzers. We extend FuzzBench to support configuration-aware fuzzing.",
       tech: "Docker, C, C++, Python",
-      link: "",
+      link: "https://arnabdev.netlify.app/spur.pdf",
     },
     {
       name: "HydraWatch",
